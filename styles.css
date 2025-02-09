@@ -1,0 +1,530 @@
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-size: cover;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #212121;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el nav */
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #363636;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 100; /* Asegura que esté encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional, para darle sombra */
+}
+
+/* Asegúrate de que el nav ocupe todo el ancho del header */
+nav {
+    width: auto; /* Ajusta el tamaño según el contenido */
+}
+
+
+/* Opcionalmente, puedes darle una sombra al header para hacerlo destacar más */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    border-bottom: #ec2f2c 4px solid;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+nav ul li a:hover {
+    color: #ec2f2c;
+    filter: drop-shadow(0 2px 5px #ec2f2c);
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea los elementos en los extremos */
+    padding: 10% 3%;
+    height: 85vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(-1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: left;
+    flex: 1; /* Permite que ocupe todo el espacio disponible */
+}
+
+.hero-content-button {
+    height: 90%;
+    justify-content: end;
+    max-width: max-content;
+    position: relative;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 4vw, 5rem); /* Ajusta la fuente para ser responsive */
+    margin: 10px 0;
+    text-shadow: 2px 3px 10px black;
+}
+
+.highlight {
+    color: #ec2f2c;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #ec2f2c;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 6px black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    filter: drop-shadow(0 2px 5px black);
+}
+
+.apply-button:hover {
+    background-color: #d23d3a;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #363636;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column; /* Cambia a columna para pantallas medianas */
+        justify-content: center; /* Centra verticalmente */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .hero-content {
+        text-align: center; /* Centrado para pantallas más pequeñas */
+        max-width: 100%;
+    }
+
+    .hero-content-button {
+        padding-right:0;
+        padding-left: 0;
+        text-align: center;
+        justify-content: flex-start; /* Mantiene el botón centrado en pantallas medianas */
+    }
+
+    .hero h1 {
+        max-width: fit-content;
+        font-size: clamp(2.5rem, 6vw, 4rem); /* Ajusta el texto en pantallas medianas */
+    }
+
+    .apply-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero {
+        flex-direction: column; /* Alinea todo en columna en pantallas pequeñas */
+        justify-content: flex-start; /* Alinea el contenido al inicio */
+        height: 70vh;
+        padding: 10% 3%;
+    }
+
+    .hero-content {
+        text-align: -webkit-center; /* Centrado para pantallas más pequeñas */
+        max-width: 100%;
+        padding-top: 38%;
+    }
+
+    .hero-content-button {
+        order: 1; /* Mueve el botón debajo del texto */
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        height: -webkit-fill-available;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem); /* Ajusta el tamaño de la fuente */
+    }
+
+    .apply-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 8% 3%;
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+
+    .apply-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Menú hamburguesa y lateral */
+.hamburger-menu {
+    display: none; /* Ocultar en pantallas grandes */
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.hamburger-icon .bar {
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 75px;
+    transition: left 0.3s ease;
+    z-index: 51;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: #ec2f2c;
+}
+
+.side-menu.active {
+    left: 0; /* Mostrar menú lateral */
+}
+
+/* Responsividad: Menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul.desktop-menu {
+        display: none; /* Ocultar menú horizontal en pantallas pequeñas */
+    }
+
+    .hamburger-menu {
+        display: block; /* Mostrar menú hamburguesa */
+    }
+}
+.about-us {
+    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/fondo-curvas.svg');
+    background-position-x: -35px;
+    background-color: #282828; /* Fondo oscuro para coherencia */
+    text-align: justify; /* Centrar texto */
+    height: auto;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-between; /* Distribuir los elementos a la izquierda y derecha */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.img-about {
+    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/about-us.jpg');
+    position: relative;
+    width: 50%; /* Ocupa el 50% en pantallas grandes */
+    background-size: cover; /* Para que la imagen de fondo se ajuste */
+    background-position: center;
+    clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 1% 100%);
+}
+
+.about-content {
+    flex: 1; /* Permite que esta sección ocupe el espacio restante */
+    width: 50%; /* Ocupa el 50% en pantallas grandes */
+    padding: 30px 0 0px 30px;
+}
+
+.about-us h2 {
+    color: #ec2f2c; /* Color de título */
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+.about-us p {
+    color: white; /* Textos en blanco */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .service-card{
+        width: 90% !important;
+    }
+    /* Cuando la pantalla sea pequeña, los elementos deben apilarse */
+    .about-us {
+        flex-direction: column; /* Cambiar a columna */
+        justify-content: center; /* Centrar el contenido */
+        padding: 3% 0 0 0;
+    }
+
+    .img-about {
+        width: 100%; /* Hacer que ocupe todo el ancho en pantallas pequeñas */
+        clip-path: none; /* Elimina el recorte en pantallas pequeñas */
+        height: 400px; /* Ajuste de altura si es necesario */
+        margin-bottom: 5%;
+    }
+    
+
+    .about-content {
+        width: 100%; /* Asegurarse de que el contenido de texto ocupe todo el ancho en pantallas pequeñas */
+        padding: 0 30px 0px 30px /* Elimina el padding derecho en pantallas pequeñas */
+    }
+    
+    .services {
+        flex-direction: column-reverse; /* Cambiar a columna */
+        justify-content: center; /* Centrar el contenido */
+    }
+
+    .services-content {
+        padding: 0 30px 0px 30px !important;/* Elimina el padding derecho en pantallas pequeñas */
+    }
+
+    .img-services {
+        clip-path: none !important; /* Elimina el recorte en pantallas pequeñas */
+        height: 310px; /* Ajuste de altura si es necesario */
+        margin-bottom: 5%;
+    }
+
+    .services-2{
+        padding: 20px 0 !important;
+    }
+}
+
+.services {
+    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/fondo-curvas.svg');
+    background-position-x: -35px;
+    background-color: #282828; /* Fondo oscuro para coherencia */
+    text-align: justify; /* Centrar texto */
+    height: auto;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-between; /* Distribuir los elementos a la izquierda y derecha */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.img-services {
+    background-image: url('benefits.jpg');
+    position: relative;
+    width: 100%; /* Ocupa el 50% en pantallas grandes */
+    background-size: cover; /* Para que la imagen de fondo se ajuste */
+    background-position: center;
+    clip-path: polygon(0% 0%, 92% 0%, 100% 100%, 0% 100%)
+}
+
+.services-content {
+    flex: 1; /* Permite que esta sección ocupe el espacio restante */
+    width: 100%; /* Ocupa el 50% en pantallas grandes */
+    padding: 30px 30px 0px 10px;
+}
+
+.services h2 {
+    color: #ec2f2c; /* Color de título */
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+.services p {
+    color: white; /* Textos en blanco */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    margin-bottom: 20px;
+}
+
+/* Estilo general para la sección de servicios */
+.services-2 {
+    padding: 50px 0;
+    text-align: center;
+    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/fondo-curvas.svg');
+    background-position-x: -35px;
+    background-color: #282828; /* Fondo oscuro para coherencia */
+    height: auto;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: center; /* Distribuir los elementos a la izquierda y derecha */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ec2f2c;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.731);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    width: 280px; /* Ajusta el tamaño de las tarjetas */
+    padding: 0 0 20px 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon img {
+    width: 100%;  /* La imagen ocupará todo el ancho disponible del contenedor */
+    height: 200px; /* Ajusta este valor según el alto que desees */
+    object-fit: cover;  /* Asegura que la imagen se recorte correctamente si es necesario */
+    border-radius: 5px; /* Opcional, para darle un borde redondeado a las imágenes */
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    color: black;
+    padding: 12px 20px 0 20px;
+}
+
+.service-card p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 12px 20px 10px 20px;
+}
+
+.service-btn {
+    padding: 12px 25px;
+    background-color: #ec2f2c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: #d23d3a;
+}
+
+.section-contact{
+    width: 400px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con transparencia */
+    display: none; /* Inicialmente oculto */
+    z-index: 50; /* Asegura que esté encima del contenido, pero abajo del menú lateral */
+}
+
+/* Muestra el overlay cuando el menú lateral está activo */
+.side-menu.active + .overlay {
+    display: block; /* Hacer visible */
+}

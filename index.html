@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber Installations LLC</title>
+    <link rel="stylesheet" href="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/logo-color.png" alt="Fiber Installations LLC Logo">
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="#start">START</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#join">JOIN</a></li>
+            </ul>
+            <!-- Menú hamburguesa para móvil -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fondo oscuro que se activa al abrir el menu lateral -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Menú lateral para móvil -->
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="#start" onclick="closeMenu()">START</a></li>
+            <li><a href="#services" onclick="closeMenu()">SERVICES</a></li>
+            <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+            <li><a href="#join" onclick="closeMenu()">JOIN</a></li>
+        </ul>
+    </div>
+    <main>
+        <section id="start" class="hero">
+            <div class="slider">
+                <div class="slide" style="background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/banner-1.jpg');"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Your <span class="highlight">future</span></h1>
+                <h1>starts here,</h1>
+                <h1>work <span class="highlight">with us!</span></h1>
+            </div>
+            <div class="hero-content-button">
+                <a href="#apply" class="apply-button">APPLY NOW!</a>
+            </div>
+        </section>
+
+        <section id="services" class="services-2">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="service-container">
+                <!-- Servicio de Fibra Óptica Residencial -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/services-1.jpg" alt="Fibra Óptica Residencial">
+                    </div>
+                    <h3>Instalación de Internet Fibra Óptica - Residencial</h3>
+                    <p>Conectividad de alta velocidad para tu hogar, garantizando una experiencia de navegación rápida y
+                        estable.</p>
+                    <a href="#contact" class="service-btn">Solicita más información</a>
+                </div>
+
+                <!-- Servicio de Fibra Óptica Comercial -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/services-2.jpg" alt="Fibra Óptica Comercial">
+                    </div>
+                    <h3>Instalación de Internet Fibra Óptica - Comercial</h3>
+                    <p>Soluciones avanzadas para empresas, con mayor ancho de banda y fiabilidad para tus necesidades
+                        empresariales.</p>
+                    <a href="#contact" class="service-btn">Solicita más información</a>
+                </div>
+
+                <!-- Servicio de Internet Coaxial Residencial -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/services-3.jpg" alt="Internet Coaxial Residencial">
+                    </div>
+                    <h3>Instalación de Internet Coaxial - Residencial</h3>
+                    <p>Una opción confiable y de calidad para hogares con la mejor conectividad a precios competitivos.
+                    </p>
+                    <a href="#contact" class="service-btn">Solicita más información</a>
+                </div>
+
+                <!-- Servicio de Internet Coaxial Comercial -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/services-4.jpg" alt="Internet Coaxial Comercial">
+                    </div>
+                    <h3>Instalación de Internet Coaxial - Comercial</h3>
+                    <p>Conexiones de alto rendimiento para empresas, con opciones de velocidad adaptadas a tus
+                        necesidades comerciales.</p>
+                    <a href="#contact" class="service-btn">Solicita más información</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-us">
+
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>At Fiber Installations LLC, we’re passionate about connecting people. We specialize in high-quality
+                    fiber optic installation services to improve internet speeds and create more human and accessible
+                    digital experiences.</p>
+                <p>Our mission is not just to enhance connectivity, but to strengthen communities and improve
+                    communication. Every installation we complete has a positive impact on people’s lives.</p>
+                <p>Core values like respect, trust, and support are at the heart of our team. We believe true quality is
+                    measured not only by the technology we implement, but by how it improves our customers' lives.</p>
+                <p>If you’re looking for a company that values both its customers and its team, Fiber Installations LLC
+                    is the right choice for you. Let us help improve your connectivity and show you how technology can
+                    make your life easier.</p>
+            </div>
+
+            <div class="img-about">
+            </div>
+        </section>
+
+        <section id="join" class="services">
+            <div class="img-services">
+            </div>
+            <div class="services-content">
+                <h2>Why work with us?</h2>
+                <div>
+                    <h3>High Demand & Job Security</h3>
+                    <p>The fiber optic industry is growing rapidly, ensuring stable job opportunities.</p>
+                </div>
+
+                <div>
+                    <h3>Competitive Pay</h3>
+                    <p>Technicians receive attractive salaries, with potential for bonuses and overtime.</p>
+                </div>
+
+                <div>
+                    <h3>Career Growth</h3>
+                    <p>Clear pathways for advancement, from technician to management roles.</p>
+                </div>
+
+                <div>
+                    <h3>Skilled Training</h3>
+                    <p>Gain valuable technical expertise with hands-on training and certifications.</p>
+                </div>
+
+                <div>
+                    <h3>Impactful Work</h3>
+                    <p>Help improve internet connectivity, especially in underserved areas.</p>
+                </div>
+
+                <div>
+                    <h3>Modern & Dynamic Field</h3>
+                    <p>Work with cutting-edge technology in a fast-evolving industry.</p>
+                </div>
+
+                <div>
+                    <h3>Benefits & Flexibility</h3>
+                    <p>Enjoy health benefits, retirement plans, and flexible work options.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-contact">
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fiber Installations LLC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/script.js"></script>
+</body>
+
+</html>
