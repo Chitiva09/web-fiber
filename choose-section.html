@@ -1,1 +1,56 @@
 <!-- wp:pattern {"slug":"zatra/choose-section"} /-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>choose-section</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo-color.png" alt="Fiber Installations LLC Logo" /></a>
+      </div>
+      <nav>
+        <ul class="desktop-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#start">START</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#join">JOIN</a></li>
+        </ul>
+        <!-- Menú hamburguesa para móvil -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Fondo oscuro que se activa al abrir el menu lateral -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Menú lateral para móvil -->
+    <div class="side-menu" id="side-menu">
+      <ul>
+        <li><a href="#start" onclick="closeMenu()">START</a></li>
+        <li><a href="#services" onclick="closeMenu()">SERVICES</a></li>
+        <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+        <li><a href="#join" onclick="closeMenu()">JOIN</a></li>
+      </ul>
+    </div>
+
+    <main class="main-choose-section">
+        <div class=" img-choose-section-background"><img src="assets/fondo-curvas.png" alt="fondo de pagina"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fiber Installations LLC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://jc-fiberinstallations.com/wp-content/uploads/2025/01/script.js"></script>
+  </body>
+</html>
