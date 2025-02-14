@@ -559,6 +559,135 @@ p {
     padding: 0 20%;
 }
 
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .services, .services-2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-image img {
+        width: 80%;
+        clip-path: none; /* Eliminar recorte en pantallas pequeñas */
+    }
+
+    .services-content {
+        width: 90%;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    .contact-section {
+        height: auto;
+        padding: 40px 20px;
+        opacity: 0.5;
+    }
+
+    .text-contact {
+        padding: 0 10%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .services, .services-2 {
+        padding: 20px;
+    }
+
+    .service-image img {
+        width: 100%;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .services p {
+        font-size: 1rem;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .contact-section {
+        background-size: cover;
+        padding: 30px 15px;
+        height: auto;
+        opacity: 0.5;
+    }
+
+    .text-contact {
+        padding: 0 5%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/*@media (min-width: 1400px) {
+    .services, .services-2 {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .service-card {
+        width: 300px;
+    }
+}
+*/
+
+/* Para pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-container {
+        gap: 10px;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-section {
+        padding: 20px;
+        opacity: 0.5;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+}
+
 .overlay {
     top: 0;
     left: 0;
