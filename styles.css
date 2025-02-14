@@ -1,3 +1,10 @@
+:root{
+    --primary-color:#212121;
+    --second-color:#363636;
+    --third-color: white;
+    --fourth-color:#ec2f2c ;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -10,11 +17,12 @@ html{
 
 body {
     font-family: Arial, sans-serif;
-    color: white;
+    color: var(--third-color);
     background-size: cover;
     padding-left: 10%;
     padding-right: 10%;
-    background-color: #212121;
+    background-color: var(--primary-color);
+    box-sizing: border-box;
 }
 
 header {
@@ -22,7 +30,7 @@ header {
     justify-content: space-between; /* Espacio entre el logo y el nav */
     align-items: center;
     padding: 15px 5%;
-    background-color: #363636;
+    background-color: var(--second-color);
     position: fixed; /* Fija el header en la parte superior */
     top: 0;
     left: 0;
@@ -60,15 +68,15 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--third-color);
     transition: color 0.3s;
-    border-bottom: #ec2f2c 4px solid;
+    border-bottom: var(--fourth-color) 4px solid;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
 
 nav ul li a:hover {
-    color: #ec2f2c;
-    filter: drop-shadow(0 2px 5px #ec2f2c);
+    color: var(--fourth-color);
+    filter: drop-shadow(0 2px 5px var(--fourth-color));
 }
 
 .hero {
@@ -103,7 +111,7 @@ nav ul li a:hover {
 .hero-content {
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--third-color);
     text-align: left;
     flex: 1; /* Permite que ocupe todo el espacio disponible */
 }
@@ -114,7 +122,7 @@ nav ul li a:hover {
     max-width: max-content;
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--third-color);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -129,14 +137,14 @@ nav ul li a:hover {
 }
 
 .highlight {
-    color: #ec2f2c;
+    color: var(--fourth-color);
 }
 
 .apply-button {
     display: inline-block;
     padding: 15px 35px;
-    background-color: #ec2f2c;
-    color: white;
+    background-color: var(--fourth-color);
+    color: var(--third-color);
     font-weight: bold;
     text-shadow: 1px 1px 6px black;
     text-decoration: none;
@@ -154,7 +162,7 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #363636;
+    background-color: var(--second-color);
 }
 
 /* Media Queries */
@@ -258,7 +266,7 @@ footer {
 
 .hamburger-icon .bar {
     height: 4px;
-    background-color: white;
+    background-color: var(--third-color);
     border-radius: 5px;
 }
 
@@ -285,14 +293,14 @@ footer {
 
 .side-menu ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--third-color);
     padding: 10px;
     display: block;
     transition: background-color 0.3s;
 }
 
 .side-menu ul li a:hover {
-    background-color: #ec2f2c;
+    background-color: var(--fourth-color);
 }
 
 .side-menu.active {
@@ -310,7 +318,7 @@ footer {
     }
 }
 .about-us {
-    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/fondo-curvas.svg');
+    background-image: url('assets/fondo-curvas.svg');
     background-position-x: -35px;
     background-color: #282828; /* Fondo oscuro para coherencia */
     text-align: justify; /* Centrar texto */
@@ -321,7 +329,7 @@ footer {
 }
 
 .img-about {
-    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/about-us.jpg');
+    background-image: url('assets/about-us.jpg');
     position: relative;
     width: 50%; /* Ocupa el 50% en pantallas grandes */
     background-size: cover; /* Para que la imagen de fondo se ajuste */
@@ -336,14 +344,14 @@ footer {
 }
 
 .about-us h2 {
-    color: #ec2f2c; /* Color de título */
+    color: var(--fourth-color); /* Color de título */
     font-size: 2.5rem;
     margin-bottom: 20px; /* Espaciado inferior */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
 }
 
 .about-us p {
-    color: white; /* Textos en blanco */
+    color: var(--third-color); /* Textos en blanco */
     font-size: 1.2rem; /* Tamaño de fuente */
     line-height: 1.5; /* Altura de línea para mejor legibilidad */
     margin-bottom: 20px;
@@ -394,7 +402,7 @@ footer {
 }
 
 .services {
-    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/fondo-curvas.svg');
+    background-image: url('assets/fondo-curvas.svg');
     background-position-x: -35px;
     background-color: #282828; /* Fondo oscuro para coherencia */
     text-align: justify; /* Centrar texto */
@@ -404,30 +412,33 @@ footer {
     flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
 }
 
-.img-services {
-    background-image: url('benefits.jpg');
+.service-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-image img {
+    width: 400px;
+    max-width: 100%;
+    border-radius:0px;
     position: relative;
-    width: 100%; /* Ocupa el 50% en pantallas grandes */
-    background-size: cover; /* Para que la imagen de fondo se ajuste */
-    background-position: center;
-    clip-path: polygon(0% 0%, 92% 0%, 100% 100%, 0% 100%)
+    clip-path: polygon(0% 0%, 92% 0%, 100% 100%, 1% 100%);
 }
 
 .services-content {
     flex: 1; /* Permite que esta sección ocupe el espacio restante */
-    width: 100%; /* Ocupa el 50% en pantallas grandes */
-    padding: 30px 30px 0px 10px;
 }
 
 .services h2 {
-    color: #ec2f2c; /* Color de título */
+    color: var(--fourth-color); /* Color de título */
     font-size: 2.5rem;
     margin-bottom: 20px; /* Espaciado inferior */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
 }
 
 .services p {
-    color: white; /* Textos en blanco */
+    color: var(--third-color); /* Textos en blanco */
     font-size: 1.2rem; /* Tamaño de fuente */
     line-height: 1.5; /* Altura de línea para mejor legibilidad */
     margin-bottom: 20px;
@@ -437,7 +448,7 @@ footer {
 .services-2 {
     padding: 50px 0;
     text-align: center;
-    background-image: url('https://jc-fiberinstallations.com/wp-content/uploads/2025/01/fondo-curvas.svg');
+    background-image: url("assets/fondo-curvas.png");
     background-position-x: -35px;
     background-color: #282828; /* Fondo oscuro para coherencia */
     height: auto;
@@ -448,7 +459,7 @@ footer {
 
 .section-title {
     font-size: 2.5rem;
-    color: #ec2f2c;
+    color: var(--fourth-color);
     margin-bottom: 40px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
@@ -497,8 +508,8 @@ footer {
 
 .service-btn {
     padding: 12px 25px;
-    background-color: #ec2f2c;
-    color: white;
+    background-color: var(--fourth-color);
+    color: var(--third-color);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -509,18 +520,51 @@ footer {
     background-color: #d23d3a;
 }
 
-.section-contact{
-    width: 400px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.contact-section {
+    background: url("../assets/benefits.jpg") no-repeat center center/cover;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+
+h1 {
+    padding: 3% 4% 0% 5%;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+.text-contact{
+    max-width: 100%;
+    padding: 0 20%;
 }
 
 .overlay {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Negro con transparencia */
-    display: none; /* Inicialmente oculto */
     z-index: 50; /* Asegura que esté encima del contenido, pero abajo del menú lateral */
 }
 
